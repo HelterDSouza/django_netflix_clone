@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 LOCAL_APPS = [
+    "commons.apps.CommonsConfig",
 ]
 
 DEV_RELATED = [
