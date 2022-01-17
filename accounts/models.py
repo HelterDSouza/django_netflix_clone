@@ -1,4 +1,4 @@
-from typing import Dict, Optional
+from typing import Dict
 
 from commons.models import BaseModel
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
@@ -86,7 +86,7 @@ class CustomUser(BaseModel, AbstractBaseUser, PermissionsMixin):
         default=False,
         help_text=_("Designates whether the user can log into this admin site."),
     )
-    
+
     objects = CustomUserManager()
 
     EMAIL_FIELD = "email"
