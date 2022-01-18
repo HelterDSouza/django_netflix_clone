@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ["*"]
 
 LOCAL_APPS = [
     "accounts.apps.AccountsConfig",
+    "profiles.apps.ProfilesConfig",
     "commons.apps.CommonsConfig",
 ]
 
