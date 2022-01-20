@@ -16,11 +16,23 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.shortcuts import redirect, render
 from django.urls import include, path
+from django.views.generic.base import View
+
+
+class Home(View):
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect("profiles:list")
+        return render(request, "index.html")
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
+    path("profiles/", include("profiles.urls", namespace="profiles")),
+    path("", Home.as_view()),
 ]
 
 
