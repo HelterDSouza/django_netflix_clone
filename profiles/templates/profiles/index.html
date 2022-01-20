@@ -32,10 +32,12 @@ Netflix
     {% if request.user.profiles.all|length < 6 %}
 
     <div class="flex justify-center items-center">
+        <a href="{% url 'profiles:create' %}">
 
             <button class="px-4 py-2 rounded-md outline-none bg-gray-400 text-gray-100">
                 Add A New Profile
             </button>
+        </a>
     </div>
     {% endif %}
 </section>

@@ -6,4 +6,5 @@ app_name = "profiles"
 
 urlpatterns = [
     path("", ProfileListView.as_view(), name="list"),
+    path("create/", ProfileCreateView.as_view(), name="create"),
 ]
