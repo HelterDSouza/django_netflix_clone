@@ -13,7 +13,11 @@
     {% block content %}
     {% endblock content %}
 
+
+
     {% include 'partials/_footer.html' %}
+    {% block js %}
+    {% endblock js %}
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 
