@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "netflix"
+version = "0.1.0"
+description = "Netflix clone using django"
+authors = ["helter daniel <helterdaniel@hotmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.0.1"
+django-allauth = "^0.47.0"
+Pillow = "^9.0.0"
+dj-database-url = "^0.5.0"
+python-decouple = "^3.5"
+psycopg2-binary = "^2.9.3"
+
+[tool.poetry.dev-dependencies]
+black = "^21.12b0"
+flake8 = "^4.0.1"
+django-extensions = "^3.1.5"
+ipython = "^8.0.0"
+django-debug-toolbar = "^3.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
