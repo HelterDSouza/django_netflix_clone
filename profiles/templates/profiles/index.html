@@ -17,6 +17,7 @@ Netflix
     <div class="flex flex-wrap justify-center items-center w-10/12  md:w-6/12">
 
         {% for profile in profiles %}
+        <a href="{% url 'movies:index' profile_id=profile.identifier %}">
 
             <div class="w-40 h-40 m-4  bg-blue-500 flex justify-center items-center flex-col rounded-md cursor-pointer">
                 <p class='text-6xl'>
@@ -26,6 +27,7 @@ Netflix
                     {{profile.name|truncatechars:12}}
                 </p>
             </div>
+        </a>
         {% endfor %}
 
     </div>

@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<main class='bg-primary_black h-full w-full '>
+
+    {{ video_url|json_script:"video_data" }}
+
+    <video controls class="w-full h-screen player"></video>
+
+
+</main>
+
+
+
+
+{% block js %}
+
+<script>
+    const videoEl = document.querySelector('video');
+    const url = new URL(location.href);
+    videoEl.setAttribute('src', '{{video.file.url}}');
+</script>
+<script src="{% static 'movies/js/movie.js' %}" />
+{% endblock js %}
+
+{% endblock content %}
