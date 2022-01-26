@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 LOCAL_APPS = [
+    "movies.apps.MoviesConfig",
     "accounts.apps.AccountsConfig",
     "profiles.apps.ProfilesConfig",
     "commons.apps.CommonsConfig",

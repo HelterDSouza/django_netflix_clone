@@ -32,6 +32,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
     path("profiles/", include("profiles.urls", namespace="profiles")),
+    path("movies/", include("movies.urls", namespace="movies")),
     path("", Home.as_view()),
 ]
 
